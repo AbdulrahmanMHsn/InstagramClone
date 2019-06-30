@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+
+
+    <!---Bottom Navigation Menu-->
+    <string name="house">house</string>
+</resources>
