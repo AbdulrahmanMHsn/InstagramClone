@@ -7,4 +7,6 @@
     <color name="grey">#bfbfbf</color>
     <color name="white">#fff</color>
     <color name="holo_light">#fff3f3f3</color>
+    <color name="black">#000000</color>
+    <color name="link_blue">#005ce6</color>
 </resources>
