@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/editProfile_circleImg_changePhoto"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_circle"
+                    app:civ_border_color="@color/grey"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/editProfile_txtVw_changePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:text="@string/change_photo"
+                    android:textColor="@color/link_blue"
+                    android:textSize="@dimen/medium_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/name"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="RtlCompat" />
+
+                <EditText
+                    android:id="@+id/editProfile_editTxt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:hint="@string/name"
+                    android:textColor="@color/link_blue"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="Autofill,RtlCompat,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/username"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="RtlCompat" />
+
+                <EditText
+                    android:id="@+id/editProfile_editTxt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:hint="@string/username"
+                    android:textColor="@color/link_blue"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="Autofill,RtlCompat,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/website"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="RtlCompat" />
+
+                <EditText
+                    android:id="@+id/editProfile_editTxt_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:hint="@string/website"
+
+                    android:textColor="@color/link_blue"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="Autofill,RtlCompat,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:text="@string/bio"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="RtlCompat" />
+
+                <EditText
+                    android:id="@+id/editProfile_editTxt_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:hint="@string/bio"
+                    android:textColor="@color/link_blue"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="Autofill,RtlCompat,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/white_grey_border_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/private_information"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="@string/email_address"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="RtlCompat" />
+
+
+                    <TextView
+                        android:id="@+id/editProfile_txtVw_emailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="a.mostafahsn@gmail.com"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="RtlCompat" />
+
+
+                    <TextView
+                        android:id="@+id/editProfile_txtVw_PhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="01068228704"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/grey"
+                    android:padding="8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="@string/gender"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="RtlCompat" />
+
+
+                    <TextView
+                        android:id="@+id/editProfile_txtVw_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start"
+                        android:text="Male"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/large_text"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</merge>

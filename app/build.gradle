@@ -33,5 +33,11 @@ dependencies {
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 
     //Circle ImageView
+    /*--https://github.com/hdodenhof/CircleImageView--*/
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //Universal Image Loader
+    /*--https://github.com/nostra13/Android-Universal-Image-Loader--*/
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
 }
