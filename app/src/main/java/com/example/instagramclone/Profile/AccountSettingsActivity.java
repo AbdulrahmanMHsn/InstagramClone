@@ -21,29 +21,27 @@ import java.util.ArrayList;
 public class AccountSettingsActivity extends AppCompatActivity {
 
     private static final String TAG = "AccountSettingsActivity";
+
     private Context mContext;
 
-    //class
-    private SectionsStatePagerAdapter sectionsStatePagerAdapter;
-
-    //widget
+    private SectionsStatePagerAdapter pagerAdapter;
     private ViewPager mViewPager;
-    private RelativeLayout relativeLayout;
+    private RelativeLayout mRelativeLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accountsettings);
+        setContentView(R.layout.activity_account_settings);
         mContext = AccountSettingsActivity.this;
         Log.d(TAG, "onCreate: started.");
         mViewPager = findViewById(R.id.container);
-        relativeLayout = findViewById(R.id.relLayout1);
+        mRelativeLayout = findViewById(R.id.relLayout1);
 
         setupSettingsList();
 
         setupFragments();
 
-        //setup the backarrow for navigating back to "ProfileActivity"
+        //setup the back arrow for navigating back to "ProfileActivity"
         ImageView backArrow = findViewById(R.id.accountSettingToolbar_img_backArrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,23 +52,22 @@ public class AccountSettingsActivity extends AppCompatActivity {
         });
     }
 
-    private void setupFragments() {
-        sectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
-        sectionsStatePagerAdapter.addFragment(new EditProfileFragment(), getString(R.string.edit_profile)); // fragment 0
-        sectionsStatePagerAdapter.addFragment(new SignOutFragment(), getString(R.string.sign_out)); // fragment 1
+    private void setupFragments(){
+        pagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        pagerAdapter.addFragment(new EditProfileFragment(), getString(R.string.edit_profile)); //fragment 0
+        pagerAdapter.addFragment(new SignOutFragment(), getString(R.string.sign_out)); //fragment 1
     }
 
-    private void setViewPager(int fragmentNumber) {
-        relativeLayout.setVisibility(View.GONE);
+    private void setViewPager(int fragmentNumber){
+        mRelativeLayout.setVisibility(View.GONE);
         Log.d(TAG, "setViewPager: navigating to fragment #: " + fragmentNumber);
-        mViewPager.setAdapter(sectionsStatePagerAdapter);
+        mViewPager.setAdapter(pagerAdapter);
         mViewPager.setCurrentItem(fragmentNumber);
     }
 
-
-    private void setupSettingsList() {
+    private void setupSettingsList(){
         Log.d(TAG, "setupSettingsList: initializing 'Account Settings' list.");
-        ListView listView = findViewById(R.id.lvAccountSettings);
+        ListView listView =  findViewById(R.id.lvAccountSettings);
 
         ArrayList<String> options = new ArrayList<>();
         options.add(getString(R.string.edit_profile)); //fragment 0
@@ -89,3 +86,4 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
     }
 }
+

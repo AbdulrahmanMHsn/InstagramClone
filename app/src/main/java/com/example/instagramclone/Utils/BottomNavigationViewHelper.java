@@ -25,10 +25,11 @@ public class BottomNavigationViewHelper {
 
     public static void setupBottomNavigationView(BottomNavigationViewEx bottomNavigationViewEx) {
         Log.d(TAG, "setupBottomNavigationView: Setting up BottomNavigationView");
-        bottomNavigationViewEx.enableAnimation(false);
+        bottomNavigationViewEx.enableAnimation(true);
         bottomNavigationViewEx.enableItemShiftingMode(false);
         bottomNavigationViewEx.enableShiftingMode(false);
         bottomNavigationViewEx.setTextVisibility(false);
+
     }
 
 
@@ -41,6 +42,7 @@ public class BottomNavigationViewHelper {
                     case R.id.ic_house:
                         context.startActivity(new Intent(context,HomeActivity.class));//ACTIVITY_NUM = 0
                         break;
+
                     case R.id.ic_search:
                         context.startActivity(new Intent(context, SearchActivity.class));//ACTIVITY_NUM = 1
                         break;
