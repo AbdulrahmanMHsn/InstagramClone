@@ -24,7 +24,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
     private Context mContext;
 
-    private SectionsStatePagerAdapter pagerAdapter;
+    private SectionsStatePagerAdapter mPagerAdapter;
     private ViewPager mViewPager;
     private RelativeLayout mRelativeLayout;
 
@@ -53,15 +53,15 @@ public class AccountSettingsActivity extends AppCompatActivity {
     }
 
     private void setupFragments(){
-        pagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
-        pagerAdapter.addFragment(new EditProfileFragment(), getString(R.string.edit_profile)); //fragment 0
-        pagerAdapter.addFragment(new SignOutFragment(), getString(R.string.sign_out)); //fragment 1
+        mPagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        mPagerAdapter.addFragment(new EditProfileFragment(), getString(R.string.edit_profile)); //fragment 0
+        mPagerAdapter.addFragment(new SignOutFragment(), getString(R.string.sign_out)); //fragment 1
     }
 
     private void setViewPager(int fragmentNumber){
         mRelativeLayout.setVisibility(View.GONE);
         Log.d(TAG, "setViewPager: navigating to fragment #: " + fragmentNumber);
-        mViewPager.setAdapter(pagerAdapter);
+        mViewPager.setAdapter(mPagerAdapter);
         mViewPager.setCurrentItem(fragmentNumber);
     }
 
@@ -83,7 +83,5 @@ public class AccountSettingsActivity extends AppCompatActivity {
                 setViewPager(position);
             }
         });
-
     }
 }
-
